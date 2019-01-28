@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import unirest from 'unirest';
-import AppBar from '@material-ui/core/AppBar';
 import Table from '@material-ui/core/Table';
 import TableBody from '@material-ui/core/TableBody';
 import TableCell from '@material-ui/core/TableCell';
@@ -8,7 +6,9 @@ import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import './App.css';
 
-const places = [ { PlaceId: 'STOC-sky',
+/* 
+  Sample Data: 
+  [ { PlaceId: 'STOC-sky',
       PlaceName: 'Stockholm',
       CountryId: 'SE-sky',
       RegionId: '',
@@ -38,15 +38,16 @@ const places = [ { PlaceId: 'STOC-sky',
       RegionId: '',
       CityId: 'STOC-sky',
       CountryName: 'Sweden' } ];
+  */ 
 
 class App extends Component {
 
   componentWillMount() {
-    fetch("https://skyscanner-skyscanner-flight-search-v1.p.rapidapi.com/apiservices/autosuggest/v1.0/UK/GBP/en-GB/?query=London", { headers: {
+    fetch(`https://skyscanner-skyscanner-flight-search-v1.p.rapidapi.com/apiservices/autosuggest/v1.0/UK/GBP/en-GB/?query=${this.state ? this.state.city : 'Paris'}`, { headers: {
       "X-RapidAPI-Key": "5664466a8cmsh6d583c66d052ce0p15f49bjsn4d2a6186c3be"}}
   )
       .then(res => res.json())
-      .then(json => {console.log(json); debugger; this.setState({ result: json })});
+      .then(json => {this.setState({ result: json })});
   }
 
   render() {
