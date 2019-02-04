@@ -1,68 +1,42 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is designed for a JavaScript workshop to introduce college students to a working JS application.
 
-## Available Scripts
+# Installations
+Install Node 8
+* Directions: go to https://nodejs.org/en/download/ and click on the Windows or MacOS Installer, and then follow the directions
 
-In the project directory, you can run:
+Install Git
+* The link is here https://git-scm.com/downloads and the same directions apply: click on the appropriate OS.
 
-### `npm start`
+# Create React App
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app). This is super cool and easy to use - check out their repo to start your own app!
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+# Skyscanner API
+This project uses the [Skyscanner API](https://partners.skyscanner.net/affiliates/travel-apis/). You will need [a free API key](https://partners.skyscanner.net/contact/affiliates).
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+Once you have an API key, you can play around with [RapidAPI](https://rapidapi.com/skyscanner/api/skyscanner-flight-search) to test getting different results from Skyscanner.
 
-### `npm test`
+# How do I get this repo running on my machine?
+There are a few options for accessing this code so that you can use it. We'll start with the least difficult option.
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. Download the zip file
+  * At https://github.com/DanielJRutledge/serverless-demo look to the right for a button called "Download Zip".
+  * Click this button, and save to a convenient location on your computer.
+    * Mac: click on the downloaded zip to install.
+    * Windows: right-click and WinZip to install.
 
-### `npm run build`
+2. Command Line + Git
+  * If you have some knowledge of Command Line and have Git installed, you can follow these steps:
+	  * cd to a desired folder
+    * git clone https://github.com/DanielJRutledge/serverless-demo.git
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Once you have cloned the repo, you'll need to do a few things.
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+In the command line, navigate to the new serverless-demo directory.
+* run `npm install`
+* after npm install is complete, then run `npm start`
+* you should be able to access the app in the browser at http://localhost:3000/
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+# Stretch goals
+This app uses [Material-UI](https://material-ui.com/). See if you can update the color scheme to dark mode [(hint!)](https://material-ui.com/style/color/).
+ 
+Try adding a new dropdown with a list of cities. When the user selects a city, a new list of results displays.
